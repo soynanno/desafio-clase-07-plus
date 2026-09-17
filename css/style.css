@@ -1,45 +1,53 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 
 :root{
-     --letrapagina:font-family: "Source Code Pro", monospace;
+     /* Tipografías y fuentes */
+     --letrapagina: "Source Code Pro", monospace;
+     --letra-titulo-central: "Caveat", cursive;
     
+     /* Colores */
      --fondoheader: cornflowerblue;
      --colorheader: aqua;
-    
      --fondotitulosuperior: #0a33ed;
-     --colortitulo:white;
-    
-     --fondotituloinferior:#0db7f7;
-    
-     --fondoseccion:#eaeded ;
+     --colortitulo: white;
+     --fondotituloinferior: #0db7f7;
+     --fondoseccion: #eaeded;
      --colorseccion: gray;
-    
-     --fondotituloseccion:#0db7f7;
-     --colortituloseccion:white;
-
-     --fondofooter:#0db7f7;
+     --fondotituloseccion: #0db7f7;
+     --colortituloseccion: white;
+     --fondofooter: #0db7f7;
      --colorfooter: white;
 
+     /* NUEVAS VARIABLES: Tamaños de fuente */
+     --fs-titulo-superior: 16px;
+     --fs-titulo-centro: 40px;
+     --fs-titulo-inferior: 20px;
+     --fs-general: 16px;
+
+     /* NUEVAS VARIABLES: Anchos de contenedores */
+     --width-section-desktop: 80%;
+     --width-formulario-desktop: 60%;
+     --width-img-desktop: 60%;
+
+     /* NUEVAS VARIABLES: Espaciados y bordes */
+     --spacing-padding: 15px;
+     --border-radius-general: 10px;
 } 
+
 /* reseteo universal */
-*¨ {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 /* defino el estilo del body */
 body {
     font-family: var(--letrapagina);
     background-image: url(../assets/fondo/round.png);
 }
-
-
-
 
 /* defino el estilo del encabezado */
 header{
@@ -48,69 +56,52 @@ header{
     text-align: center;
 }
 
-
-
 /* defino las clases de los titulos dentro del header */
 .titulosuperior{
-   background-color: #0a33ed;
+   background-color: var(--fondotitulosuperior);
+   font-size: var(--fs-titulo-superior);
    padding: 10px;
    letter-spacing: 5px;
 }
 
 .titulocentro{
-    color:var(--colortitulo);
-    font-family: "Caveat", cursive;
-    font-size: 40px;
+    color: var(--colortitulo);
+    font-family: var(--letra-titulo-central);
+    font-size: var(--fs-titulo-centro);
     margin: 26px;
     word-spacing: 8px;
     letter-spacing: 5px;
 }
 
 .tituloinferior{
-font-size: 20px;
-background-color:var(--fondotituloinferior);
-color: white;
-text-align: right;
-padding: 10px;
-
+  font-size: var(--fs-titulo-inferior);
+  background-color: var(--fondotituloinferior);
+  color: white;
+  text-align: right;
+  padding: 10px;
 }
 
-
-
-
 /* estructura principal de la página */
-
-/* defino las secciones */
 section{
-    width: 80%;
-    background-color:var(--fondoseccion);
-    color:var(--colorseccion);
+    width: var(--width-section-desktop);
+    background-color: var(--fondoseccion);
+    color: var(--colorseccion);
     text-align: justify;
     padding-bottom: 20px;
     margin: 25px auto;
 }
 
-
-
-
 /* defino el titulo dentro de las secciones */
 section h2{
     background-color: var(--fondotituloseccion);
-    color:var(--colortituloseccion);
+    color: var(--colortituloseccion);
     padding: 10px 10px;
 }
-
-
-
-
 
 /* defino la lista no ordenada dentro de las secciones */
 section ul{
     margin-left: 70px;
 }
-
-
-
 
 /* defino los parrafos dentro de las secciones */
 section p{
@@ -118,87 +109,64 @@ section p{
     margin: 16px 0;
 }
 
-
-
-
 /* estilo de los articulos */
 article{
     margin: 20px auto;
     text-align: center;
 }
 
-
-
 /* defino el estilo de las imágenes dentro de los articulos */
 article img{
-    width: 60%;
-    height: 50%;
+    width: var(--width-img-desktop);
+    height: auto;
     box-shadow: 15px 15px 20px gray;
 }
 
-
 /* defino el estilo del pie de página */
 footer{
-    background-color: #0db7f7;
-    color: white;
+    background-color: var(--fondofooter);
+    color: var(--colorfooter);
     text-align: center;
+    padding: var(--spacing-padding);
 }
-
-
 
 /* Definimos los estilos de Formulario */
-
-/* definimos la clase formulario que da formato a la seccion */
 .formulario{
-    width: 60%;
+    width: var(--width-formulario-desktop);
     margin: 50px auto;
-    padding: 15px;
+    padding: var(--spacing-padding);
 }
 
-
-
-
-/* definimos el titulo dentro de la clase formulario */
 .formulario h2{
     margin-bottom: 20px;
 }
 
-
-
-/* definimos la etiqueta formulario */
 form{
     text-align: left;
 }
 
-
-
-
-/* definimos las etiquetas que forman parte del formulario */
 input, textarea, select{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: var(--border-radius-general);
     background-color: #fff;
 }
 
-
-
-/* definimos las clases de los botones del formulario */
 .guardar, .cancelar{
     width: 100%;
-    font-size: 16px;
+    font-size: var(--fs-general);
     padding: 12px 20px;
     margin: 8px 0px;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--border-radius-general);
 }
 
 .guardar{
-background-color: #0a33ed;
-color: white;
-animation: latir 1.5s ease-in infinite;
+  background-color: #0a33ed;
+  color: white;
+  animation: latir 1.5s ease-in infinite;
 }
 
 @keyframes latir{
@@ -206,47 +174,90 @@ animation: latir 1.5s ease-in infinite;
         transform: scale(1);
         box-shadow: 0 0 0 0 rgba(10, 10 , 10 , 0.4);
     }
-
     70%{
         transform: scale(1.05);
         box-shadow:  0 0 0 15px rgba(30, 144 , 255 , 0);
     }
-
     100%{
          transform: scale(1);
         box-shadow:  0 0 0 15px rgba(30, 144 , 255 , 0);
     }
 }
 
-/* definimos la accion cuando se pasa el mouse sobre el boton guardar */
-/* .guardar:hover{
-    background-color:#0db9f779 ;
-} */
-
 .cancelar{
     background-color: cornflowerblue;
     color: white;
 }
 
-
-
-/* definimos la accion cuando se pasa el mouse sobre el boton cancelar */
-
 .cancelar:hover{
     background-color: #0db9f779;
 }
 
-
-
-
-/* enlace entre páginas dentro del header */
 header a{
     color: #fff;
     text-decoration: none;
-
 }
 
 
+/* =========================================
+   MEDIA QUERIES (TABLETS Y CELULARES)
+========================================= */
 
+/* --- TABLETS (hasta 768px) --- */
+@media screen and (max-width: 768px) {
+  section {
+    width: 90%;
+    margin: 20px auto;
+  }
 
-/* boton subir */
+  .formulario {
+    width: 80%;
+  }
+
+  article img {
+    width: 80%;
+  }
+
+  .titulocentro {
+    font-size: 32px;
+  }
+}
+
+/* --- CELULARES (hasta 480px) --- */
+@media screen and (max-width: 480px) {
+  section {
+    width: 95%;
+    padding-bottom: 10px;
+  }
+
+  section ul {
+    margin-left: 25px;
+  }
+
+  .formulario {
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  article img {
+    width: 95%;
+    box-shadow: 5px 5px 10px gray;
+  }
+
+  .titulocentro {
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin: 15px 0;
+  }
+
+  .titulosuperior {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .tituloinferior {
+    font-size: 16px;
+    text-align: center;
+  }
+}
