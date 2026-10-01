@@ -1,90 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Contacto | Ejercicio con Box Model</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./css/style.css" />
+  <title>Contacto | Ejercicio con Box Model</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+  <meta name="description"
+    content="Página sobre desarrollo web, que nos brinda datos sobre los lenguajes html, css y javascript">
 
-  <body>
-    <header>
-      <h3 class="titulosuperior">
-        Escuela Normal Superior Nº40 "Mariano Moreno"
-      </h3>
-      <h1 class="titulocentro">Tecnicaturas en Desarrollo de Software</h1>
-      <h3 class="tituloinferior">
-        <a href="index.html">
-          <i class="fa-solid fa-house fa-beat"></i> Home
-        </a>
-      </h3>
-    </header>
+  <link rel="stylesheet" href="./css/style.css" />
 
-    <section class="formulario">
-      <h2>Contactate con nosotros</h2>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-      <form name="formulario" method="POST" action="">
-        <label for="nombre">Nombre y Apellido</label>
-        <input
-          type="text"
-          name="nombre"
-          id="nonbre"
-          placeholder="Ingrese su nombre"
-          required
-        />
+<body>
+  <header>
+    <h3 class="titulosuperior">
+      Escuela Normal Superior Nº40 "Mariano Moreno"
+    </h3>
+    <h1 class="titulocentro">Tecnicaturas en Desarrollo de Software</h1>
+    <h3 class="tituloinferior">
+      <a href="index.html">
+        <i class="fa-solid fa-house fa-beat"></i> Home
+      </a>
+    </h3>
+  </header>
 
-        <label for="correo">Correo electrónico</label>
-        <input
-          type="email"
-          name="correo"
-          id="correo"
-          placeholder="ingrese su correo electrónico"
-          required
-        />
+  <section class="formulario">
+    <h2>Contactate con nosotros</h2>
 
-        <label for="telefono">Teléfono</label>
-        <input
-          type="number"
-          name="telefono"
-          id="telefono"
-          placeholder="ingrese su correo electrónico"
-          required
-        />
-        <label for="correo">Correo electrónico</label>
+    <form name="formulario" method="POST" netlify>
+      <label for="nombre">Nombre y Apellido</label>
+      <input type="text" name="nombre" id="nonbre" placeholder="Ingrese su nombre" required />
 
-        <input
-          type="email"
-          name="correo"
-          id="correo"
-          placeholder="ingrese su correo electrónico"
-          required
-        />
+      <label for="correo">Correo electrónico</label>
+      <input type="email" name="correo" id="correo" placeholder="ingrese su correo electrónico" required />
 
-        <label for="msg">Mensaje</label>
-        <textarea
-          name="msg"
-          id="msg"
-          placeholder="deje su mensaje aquí...."
-          rows="7"
-        ></textarea>
+      <label for="telefono">Teléfono</label>
+      <input type="number" name="telefono" id="telefono" placeholder="ingrese su correo electrónico" required />
+      <label for="correo">Correo electrónico</label>
 
-        <button type="submit" class="guardar">Enviar la consulta</button>
-        <button type="reset" class="cancelar">Borrar los datos</button>
-      </form>
-    </section>
+      <input type="email" name="correo" id="correo" placeholder="ingrese su correo electrónico" required />
 
-    <footer>
-      <h4>Derechos reservados 2026</h4>
-    </footer>
-  </body>
+      <label for="msg">Mensaje</label>
+      <textarea name="msg" id="msg" placeholder="deje su mensaje aquí...." rows="7"></textarea>
+
+      <button type="submit" class="guardar">Enviar la consulta</button>
+      <button type="reset" class="cancelar">Borrar los datos</button>
+    </form>
+  </section>
+
+  <footer>
+    <h4>Derechos reservados 2026</h4>
+  </footer>
+</body>
+
 </html>
