@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -33,16 +33,20 @@
   <section class="formulario">
     <h2>Contactate con nosotros</h2>
 
+<<<<<<< HEAD
     <form name="formulario" method="post" action="gracias.html" netlify>
+=======
+    <form name="formulario" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="formulario" />
+>>>>>>> 2d4798815de3fd76bcf40b6ecd31d9ae2b183590
       <label for="nombre">Nombre y Apellido</label>
-      <input type="text" name="nombre" id="nonbre" placeholder="Ingrese su nombre" required />
+      <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required />
 
       <label for="correo">Correo electrónico</label>
       <input type="email" name="correo" id="correo" placeholder="ingrese su correo electrónico" required />
 
       <label for="telefono">Teléfono</label>
-      <input type="number" name="telefono" id="telefono" placeholder="ingrese su número" required />
-      <label for="correo">Correo electrónico</label>
+      <input type="tel" name="telefono" id="telefono" placeholder="ingrese su número" required />
 
       <label for="msg">Mensaje</label>
       <textarea name="msg" id="msg" placeholder="deje su mensaje aquí...." rows="7"></textarea>
